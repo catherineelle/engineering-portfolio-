@@ -180,3 +180,85 @@ p {
     padding: 20px;
   }
 }
+
+
+/* ===== HERO / HOMEPAGE SECTION ===== */
+
+.hero {
+  padding: 50px 0 70px;
+}
+
+.hero-label {
+  color: #155E4B;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  color: #153F35;
+  font-size: 56px;
+  margin: 0 0 10px;
+}
+
+.hero h2 {
+  color: #155E4B;
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+
+.hero-subtitle {
+  color: #526B62;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  color: #526B62;
+  font-size: 17px;
+  max-width: 700px;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+/* ===== VIEW PROJECTS BUTTON ===== */
+
+.hero-button {
+  display: inline-block;
+  background-color: #155E4B;
+  color: #FFFFFF;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.3s ease,
+              transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #237A62;
+  transform: translateY(-2px);
+}
+
+/* ===== MOBILE HOMEPAGE ===== */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 25px 0 45px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero h2 {
+    font-size: 21px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+}
