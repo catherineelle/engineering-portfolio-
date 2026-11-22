@@ -262,3 +262,90 @@ p {
     font-size: 15px;
   }
 }
+
+
+/* ===== TECHNICAL SKILLS SECTION ===== */
+
+#skills {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.skills-intro {
+  color: #526B62;
+  font-size: 16px;
+  margin-bottom: 35px;
+  max-width: 700px;
+}
+
+/* Skills List */
+
+.skills-list {
+  width: 100%;
+  border-top: 1px solid #D1E5DC;
+}
+
+/* Individual Skill Rows */
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: start;
+  gap: 0;
+  padding: 25px 0;
+  border-bottom: 1px solid #D1E5DC;
+}
+
+/* Skill Category */
+
+.skill-row h3 {
+  color: #155E4B;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Skills Description */
+
+.skill-row p {
+  color: #526B62;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+  max-width: none;
+}
+
+/* Hover Effect */
+
+.skill-row {
+  transition: padding-left 0.3s ease;
+}
+
+.skill-row:hover {
+  padding-left: 10px;
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 600px) {
+
+  #skills {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 20px 0;
+  }
+
+  .skill-row h3 {
+    font-size: 16px;
+  }
+
+  .skill-row p {
+    font-size: 14px;
+  }
+
+}
