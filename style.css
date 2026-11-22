@@ -349,3 +349,80 @@ p {
   }
 
 }
+
+
+/* ===== CONTACT SECTION ===== */
+
+#contact {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.contact-intro {
+  color: #526B62;
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 700px;
+  margin-bottom: 35px;
+}
+
+/* Contact Rows */
+
+.contact-list {
+  width: 100%;
+  border-top: 1px solid #D1E5DC;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #D1E5DC;
+}
+
+.contact-row h3 {
+  color: #155E4B;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contact-row a {
+  color: #526B62;
+  font-size: 16px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.3s ease;
+}
+
+.contact-row a:hover {
+  color: #155E4B;
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 600px) {
+
+  #contact {
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+
+  .contact-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px 0;
+  }
+
+  .contact-row h3 {
+    font-size: 16px;
+  }
+
+  .contact-row a {
+    font-size: 14px;
+  }
+
+}
+
