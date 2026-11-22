@@ -1,54 +1,25 @@
 
-/* General website styling */
+/* ===== GENERAL WEBSITE STYLING ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #0b1120;
   color: #e2e8f0;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 60px 10%;
+  padding: 40px 8%;
   line-height: 1.8;
 }
 
-/* Main heading */
-h1 {
-  color: #38bdf8;
-  font-size: 48px;
-  margin-bottom: 10px;
-}
+/* ===== NAVIGATION BAR ===== */
 
-/* Section headings */
-h2 {
-  color: #7dd3fc;
-  font-size: 28px;
-  margin-top: 60px;
-}
-
-/* Paragraphs */
-p {
-  color: #cbd5e1;
-  font-size: 17px;
-  max-width: 750px;
-}
-
-/* Highlight sections */
-h2 + p {
-  border-left: 3px solid #38bdf8;
-  padding-left: 20px;
-}
-
-/* Mobile-friendly layout */
-@media (max-width: 600px) {
-  body {
-    padding: 30px 6%;
-  }
-
-  h1 {
-    font-size: 34px;
-  }
-}
-
-
-/* Navigation Bar */
 nav {
   display: flex;
   gap: 35px;
@@ -57,7 +28,6 @@ nav {
   border-bottom: 1px solid #334155;
 }
 
-/* Navigation Links */
 nav a {
   color: #cbd5e1;
   text-decoration: none;
@@ -66,70 +36,84 @@ nav a {
   transition: color 0.3s ease;
 }
 
-/* Hover Effect */
 nav a:hover {
   color: #38bdf8;
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
+/* ===== HOME SECTION ===== */
+
+h1 {
+  color: #38bdf8;
+  font-size: 48px;
+  line-height: 1.3;
+  margin-bottom: 15px;
 }
 
-/* Mobile Navigation */
-@media (max-width: 600px) {
-  nav {
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-
-  nav a {
-    font-size: 14px;
-  }
+h2 {
+  color: #7dd3fc;
+  font-size: 28px;
+  margin-top: 60px;
+  margin-bottom: 25px;
 }
 
+p {
+  color: #cbd5e1;
+  font-size: 17px;
+  max-width: 750px;
+}
 
+/* ===== ABOUT ME ===== */
 
-/* Project Cards Layout */
+#about + p {
+  border-left: 3px solid #38bdf8;
+  padding-left: 20px;
+}
+
+/* ===== PROJECT CARDS ===== */
+
 .project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
 
-/* Individual Project Cards */
 .project-card {
   background-color: #151f32;
   border: 1px solid #334155;
   border-radius: 12px;
   padding: 25px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease,
+              border-color 0.3s ease;
 }
 
-/* Hover Animation */
 .project-card:hover {
   transform: translateY(-5px);
   border-color: #38bdf8;
 }
 
-/* Project Titles */
 .project-card h3 {
   color: #38bdf8;
   font-size: 21px;
+  line-height: 1.4;
   margin-top: 0;
+  margin-bottom: 15px;
 }
 
-/* Project Descriptions */
 .project-card p {
   color: #cbd5e1;
   font-size: 15px;
   line-height: 1.7;
+  flex-grow: 1;
 }
 
-/* Project Status Labels */
+/* ===== PROJECT STATUS ===== */
+
 .project-status {
   display: inline-block;
+  align-self: flex-start;
   background-color: #164e63;
   color: #67e8f9;
   padding: 6px 14px;
@@ -139,9 +123,44 @@ html {
   margin-top: 12px;
 }
 
-/* Mobile-Friendly Project Cards */
+/* ===== TABLET RESPONSIVENESS ===== */
+
+@media (max-width: 900px) {
+  .project-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
 @media (max-width: 600px) {
+  body {
+    padding: 25px 6%;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
   .project-container {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 20px;
   }
 }
