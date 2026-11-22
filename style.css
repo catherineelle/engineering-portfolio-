@@ -87,3 +87,61 @@ html {
     font-size: 14px;
   }
 }
+
+
+
+/* Project Cards Layout */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Individual Project Cards */
+.project-card {
+  background-color: #151f32;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover Animation */
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+/* Project Titles */
+.project-card h3 {
+  color: #38bdf8;
+  font-size: 21px;
+  margin-top: 0;
+}
+
+/* Project Descriptions */
+.project-card p {
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Project Status Labels */
+.project-status {
+  display: inline-block;
+  background-color: #164e63;
+  color: #67e8f9;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+/* Mobile-Friendly Project Cards */
+@media (max-width: 600px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+}
