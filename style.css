@@ -1,0 +1,48 @@
+
+/* General website styling */
+body {
+  background-color: #0b1120;
+  color: #e2e8f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 60px 10%;
+  line-height: 1.8;
+}
+
+/* Main heading */
+h1 {
+  color: #38bdf8;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* Section headings */
+h2 {
+  color: #7dd3fc;
+  font-size: 28px;
+  margin-top: 60px;
+}
+
+/* Paragraphs */
+p {
+  color: #cbd5e1;
+  font-size: 17px;
+  max-width: 750px;
+}
+
+/* Highlight sections */
+h2 + p {
+  border-left: 3px solid #38bdf8;
+  padding-left: 20px;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+  body {
+    padding: 30px 6%;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+}
